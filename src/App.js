@@ -41,8 +41,12 @@ updateClock(props) {
       minute : props.getMinutes(),
       second : props.getSeconds()
     })
-
-    if(this.state.second % 5 == 0 && this.state.second % 3 == 0){
+    if(this.state.second == 0){
+      this.setState({
+        title : ''
+      })
+    }
+    else if(this.state.second % 5 == 0 && this.state.second % 3 == 0){
       this.setState({
         title : 'FizzBuzz'
       })
