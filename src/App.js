@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 
 
@@ -23,10 +23,6 @@ class App extends React.Component {
 
 componentDidMount(){
 
-
-
-
-
   var me = this;
   setInterval(function () {
     var d = new Date();
@@ -41,22 +37,22 @@ updateClock(props) {
       minute : props.getMinutes(),
       second : props.getSeconds()
     })
-    if(this.state.second == 0){
+    if(this.state.second === 0){
       this.setState({
         title : ''
       })
     }
-    else if(this.state.second % 5 == 0 && this.state.second % 3 == 0){
+    else if(this.state.second % 5 === 0 && this.state.second % 3 === 0){
       this.setState({
         title : 'FizzBuzz'
       })
     }
-    else if(this.state.second % 3 == 0){
+    else if(this.state.second % 3 === 0){
       this.setState({
         title : 'Fizz'
       })
     }
-    else if(this.state.second % 5 == 0 ){
+    else if(this.state.second % 5 === 0 ){
       this.setState({
         title : 'Buzz'
       })
@@ -66,8 +62,6 @@ updateClock(props) {
         title: ''
       })
     }
-
-
 }
 
 
